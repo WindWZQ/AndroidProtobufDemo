@@ -1,2 +1,2 @@
 # AndroidProtobufDemo
-This project is an demo to Android use protobufjava and protobufjavalite.
+This project is a demo to use protobufjava and protobufjavalite on android.
