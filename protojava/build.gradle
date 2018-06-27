@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.google.protobuf'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            proto {
+                // In addition to the default 'src/main/proto'
+                srcDir 'src/main/protobuf'
+                // In addition to the default '**/*.proto' (use with caution).
+                // Using an extension other than 'proto' is NOT recommended,
+                // because when proto files are published along with class files, we can
+                // only tell the type of a file from its extension.
+            }
+            java {
+                // ...
+            }
+        }
+    }
+}
+
+protobuf {
+    protoc {
+        // You still need protoc like in the non-Android case
+        artifact = 'com.google.protobuf:protoc:3.0.0'
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                // In most cases you don't need the full Java output
+                // if you use the lite output.
+                remove java
+            }
+            task.builtins {
+                java {}
+            }
+        }
+    }
+    generatedFilesBaseDir = "$projectDir/src/main/java"
+}
+
+dependencies {
+    api 'com.google.protobuf:protobuf-java:3.5.1'
+}

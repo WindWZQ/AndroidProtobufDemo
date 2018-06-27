@@ -1,0 +1,8 @@
+syntax = "proto3";
+package entity;
+message Some {
+    int32 a = 1;
+    int64 b = 2;
+    string c = 3;
+    bytes d = 4;
+}
