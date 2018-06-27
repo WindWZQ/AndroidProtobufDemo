@@ -1,6 +1,6 @@
 ## AndroidProtobufDemo
 This project is a demo to use Protobuf Java and Protobuf Java Lite on Android.
-Use Android Studio and Protobuf Gradle Plugin.</br>
+Use Android Studio and Protobuf Gradle Plugin.
 </br>
 ## WebSite
 ### Protobuf Java and Protobuf Java Lite
