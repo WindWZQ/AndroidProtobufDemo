@@ -1,5 +1,5 @@
 # AndroidProtobufDemo
-This project is a demo to use protobufjava and protobufjavalite on android.
+This project is a demo to use Protobuf Java and Protobuf Java Lite on Android.
 
 ## WebSite
 ### Protobuf Java and Protobuf Java Lite
