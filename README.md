@@ -9,4 +9,4 @@ https://github.com/google/protobuf/tree/master/java
 https://github.com/google/protobuf-gradle-plugin  
 
 ## Some Question
-Netty probably not support proto3.
+Netty probably not support proto3.Not for sure.
